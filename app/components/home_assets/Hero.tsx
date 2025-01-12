@@ -214,6 +214,41 @@ export const Hero = () => {
             living spaces through accessible tools, expert guidance, and
             educational resources.
           </ClientMotionDiv>
+          {/* Feature Icons */}
+          <div className="flex justify-center space-x-8 mt-12 mb-12">
+            {[
+              /* eslint-disable @typescript-eslint/no-unused-vars */
+              { icon: FaRocket, label: "Innovation" },
+              { icon: FaCode, label: "Development" },
+              { icon: FaLightbulb, label: "Solutions" },
+              { icon: FaChartLine, label: "Growth" },
+            ].map((feature, index) => (
+              <ClientMotionDiv
+                key={feature.label}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: index * 0.2,
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 10,
+                }}
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                className={`
+                  p-4 rounded-full shadow-lg
+                  flex items-center justify-center
+                  transition-all duration-300
+                  ${
+                    isDarkMode
+                      ? "bg-green-800/50 text-green-300 hover:bg-green-700/70"
+                      : "bg-green-100 text-green-300 hover:bg-green-200"
+                  }
+                `}
+              >
+                <feature.icon className="w-8 h-8" />
+              </ClientMotionDiv>
+            ))}
+          </div>
 
           {/* Additional Information Section */}
           <ClientMotionDiv
@@ -356,42 +391,6 @@ export const Hero = () => {
                 ))}
               </div>
             </ClientMotionDiv>
-          </div>
-
-          {/* Feature Icons */}
-          <div className="flex justify-center space-x-8 mt-8">
-            {[
-              /* eslint-disable @typescript-eslint/no-unused-vars */
-              { icon: FaRocket, label: "Innovation" },
-              { icon: FaCode, label: "Development" },
-              { icon: FaLightbulb, label: "Solutions" },
-              { icon: FaChartLine, label: "Growth" },
-            ].map((feature, index) => (
-              <ClientMotionDiv
-                key={feature.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  delay: index * 0.2,
-                  type: "spring",
-                  stiffness: 300,
-                  damping: 10,
-                }}
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                className={`
-                  p-4 rounded-full shadow-lg
-                  flex items-center justify-center
-                  transition-all duration-300
-                  ${
-                    isDarkMode
-                      ? "bg-green-800/50 text-green-300 hover:bg-green-700/70"
-                      : "bg-green-100 text-green-300 hover:bg-green-200"
-                  }
-                `}
-              >
-                <feature.icon className="w-8 h-8" />
-              </ClientMotionDiv>
-            ))}
           </div>
         </ClientMotionDiv>
       </div>
