@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light mode defaults */
+  --background: #ffffff;
+  --foreground: #333333;
+  --primary: #3b82f6;
+  --secondary: #6b7280;
+  --accent: #10b981;
+}
+
+.dark {
+  /* Dark mode overrides */
+  --background: #121212;
+  --foreground: #e0e0e0;
+  --primary: #60a5fa;
+  --secondary: #9ca3af;
+  --accent: #34d399;
+}
+
+/* Global theme transition */
+body {
+  @apply transition-colors duration-300 ease-in-out;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Smooth theme transition for all elements */
+* {
+  @apply transition-colors duration-300 ease-in-out;
+}
+
+@layer utilities {
+  /* Additional theme-specific styles */
+  .theme-shadow {
+    @apply shadow-light dark:shadow-dark;
+  }
+
+  .theme-border {
+    @apply border-light-secondary dark:border-dark-secondary;
+  }
+
+  .theme-text {
+    @apply text-light-DEFAULT dark:text-dark-DEFAULT;
+  }
+
+  .theme-background {
+    @apply bg-light-secondary dark:bg-dark-secondary;
+  }
+
+  /* Theme-aware button styles */
+  .theme-button {
+    @apply 
+      bg-light-primary 
+      text-white 
+      hover:bg-green-700 
+      dark:bg-dark-primary 
+      dark:hover:bg-green-600 
+      transition-colors 
+      duration-300 
+      ease-in-out;
+  }
+}
