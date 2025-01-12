@@ -353,11 +353,11 @@ export const Header = () => {
                 whileHover={{ scale: 1.05 }}
                 className={`
                   text-2xl font-bold flex items-center gap-2
-                  ${isDarkMode ? "text-dgreen-400" : "text-dgreen-600"}
+                  ${isDarkMode ? "text-green-200" : "text-green-900"}
                 `}
               >
                 <FaRocket />
-                YourLogo
+                EcoHabify
               </motion.div>
               <motion.button
                 whileTap={{ scale: 0.9 }}
@@ -380,8 +380,8 @@ export const Header = () => {
                 flex-grow flex flex-col justify-center space-y-6 px-6
                 ${
                   isDarkMode
-                    ? "bg-gradient-to-br from-gray-800 via-dgreen-900 to-teal-900"
-                    : "bg-gradient-to-br from-teal-200 via-yellow-200 to-green-200"
+                    ? "bg-gradient-to-br from-gray-800 via-gray-500 to-teal-900"
+                    : "bg-gradient-to-br from-teal-200 via-gray-500 to-green-200"
                 }
               `}
             >
