@@ -2,41 +2,12 @@
 
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { getCurrentUser, authActions } from '@/lib/supabase/auth';
 import { ClientMotionDiv } from '../components/home_assets/ClientMotion';
 
 export default function Dashboard() {
   const [user, setUser] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
-
-  useEffect(() => {
-    const fetchUser = async () => {
-      try {
-        const currentUser = await getCurrentUser();
-        if (currentUser) {
-          setUser(currentUser);
-        } else {
-          router.push('/login');
-        }
-      } catch (error) {
-        router.push('/login');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchUser();
-  }, [router]);
-
-  const handleLogout = async () => {
-    try {
-      await authActions.signOut();
-      router.push('/login');
-    } catch (error) {
-      console.error('Logout error:', error);
-    }
-  };
 
   if (loading) {
     return (
@@ -87,12 +58,6 @@ export default function Dashboard() {
                   onClick={() => router.push('/projects')}
                 >
                   My Projects
-                </button>
-                <button 
-                  className="w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition"
-                  onClick={handleLogout}
-                >
-                  Logout
                 </button>
               </div>
             </div>

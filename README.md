@@ -10,7 +10,6 @@ EcoHabify
 - Frontend: Next.js (React)
 - Backend: 
   - Google Gemini API
-  - Supabase
 - State Management: React Context
 - Styling: Tailwind CSS
 
@@ -18,7 +17,6 @@ EcoHabify
 
 ### Prerequisites
 - Node.js (v18+)
-- Supabase account
 - Google Cloud account (for Gemini API)
 
 ### Environment Variables
@@ -35,9 +33,6 @@ Create a `.env.local` file with the following:
    npm run dev
    ```
 
-## Database Setup
-1. Create a new Supabase project
-2. Run the SQL in `lib/supabase/schema.sql` to set up tables
 
 ## Contributing
 1. Fork the repository
