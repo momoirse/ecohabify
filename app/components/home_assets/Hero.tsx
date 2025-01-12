@@ -188,10 +188,11 @@ export const Hero = () => {
             }px)`,
           }}
         >
+          <p className="mt-20"></p>
           <h1
             className={`
               text-5xl md:text-6xl font-extrabold mb-6 leading-tight
-              ${isDarkMode ? "text-green-300" : "text-green-900"}
+              ${isDarkMode ? "text-green-900" : "text-green-500"}
             `}
             aria-label="Main Headline"
           >
@@ -252,7 +253,7 @@ export const Hero = () => {
                 `}
                 aria-label="Explore Our Services"
               >
-                Explore Services
+                Services
               </Link>
             </ClientMotionDiv>
 
@@ -268,13 +269,13 @@ export const Hero = () => {
                   focus:outline-none focus:ring-2
                   ${
                     isDarkMode
-                      ? "border-green-400 text-green-400 hover:bg-green-400 hover:text-white focus:ring-green-400"
-                      : "border-green-600 text-green-700 hover:bg-green-800 hover:text-black focus:ring-green-600"
+                      ? "border-green-400 text-green-900 hover:bg-green-400 hover:text-black focus:ring-green-400"
+                      : "border-green-600 text-green-300 hover:bg-green-800 hover:text-white focus:ring-green-600"
                   }
                 `}
                 aria-label="Get Started with EcoHabify"
               >
-                Chat with EcoHabify 🤖
+                EcoHabify 🤖
               </Link>
             </ClientMotionDiv>
           </div>
