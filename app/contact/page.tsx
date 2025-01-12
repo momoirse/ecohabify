@@ -41,8 +41,8 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implement RIACT-specific form submission logic
-    console.log("RIACT Urban Resilience Inquiry:", formData);
+    // TODO: Implement EcoHabify-specific form submission logic
+    console.log("EcoHabify Urban Resilience Inquiry:", formData);
     alert(
       "Thank you for your urban resilience inquiry! Our team will review and respond soon."
     );
@@ -53,7 +53,7 @@ export default function Contact() {
     {
       icon: FaCity,
       title: "Urban Research Hub",
-      description: "RIACT Urban Resilience Research Center @tecnico ULisboa",
+      description: "EcoHabify Urban Resilience Research Center @tecnico ULisboa",
       color: "text-green-600",
     },
     {
@@ -80,7 +80,7 @@ export default function Contact() {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <ThemedH1 className="text-center mb-12">
-            Connect with RIACT Urban Resilience (DEMO INFORMATION - JUST TESTING
+            Connect with EcoHabify Urban Resilience (DEMO INFORMATION - JUST TESTING
             IN DEVELOPMENT MODE)
           </ThemedH1>
 

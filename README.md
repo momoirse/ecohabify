@@ -1,13 +1,10 @@
-# RIACT Risk Assessment Platform
+# EcoHabify Platform
 
 ## Overview
-A comprehensive web application for risk-informed, asset-centric (RIACT) framework development, leveraging Google Gemini AI and Supabase for advanced risk assessment and data management.
+EcoHabify
 
 ## Features
-- Multi-section RIACT form generation
-- AI-powered suggestion and brainstorming
-- Supabase database integration
-- Responsive design
+EcoHabify
 
 ## Technology Stack
 - Frontend: Next.js (React)
@@ -26,11 +23,6 @@ A comprehensive web application for risk-informed, asset-centric (RIACT) framewo
 
 ### Environment Variables
 Create a `.env.local` file with the following:
-```
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-GOOGLE_GEMINI_API_KEY=your_google_gemini_api_key
-```
 
 ### Installation
 1. Clone the repository

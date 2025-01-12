@@ -113,7 +113,7 @@ export const Hero = () => {
             `}
             aria-label="Main Headline"
           >
-            Urban Resilience through RIACT
+            Advance Renovation through EcoHabify
           </h1>
           
           <ClientMotionDiv

@@ -21,14 +21,14 @@ export default function About() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <ThemedH1 className="mb-8">
-            About RIACT Urban Resilience
+            About EcoHabify
           </ThemedH1>
           
           <ThemedContainer>
             <MyPhoto />
             <ThemedP className="mt-8 text-center">
               Hi, I'm Seyed Mohammad Hossein Seyedi Rezvani, a dedicated researcher and innovator 
-              in Urban Resilience and Adaptive Community Technologies (RIACT). My work focuses on 
+              in Urban Resilience and Adaptive Community Technologies (EcoHabify). My work focuses on 
               developing transformative solutions that enhance community adaptability and 
               technological integration in urban environments.
             </ThemedP>

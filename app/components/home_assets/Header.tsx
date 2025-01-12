@@ -216,7 +216,7 @@ export const Header = () => {
             />
           </motion.div>
           <Link href="/" aria-label="Home" className="transition-colors">
-            RIACT
+            EcoHabify
           </Link>
         </motion.div>
 

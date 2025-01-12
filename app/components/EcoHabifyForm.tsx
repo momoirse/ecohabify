@@ -16,7 +16,7 @@ import {
   ThemedLabel 
 } from './ThemedComponents';
 
-interface RIACTFormData {
+interface EcoHabifyFormData {
   scope: string;
   otherScope: string;
   riskType: string;
@@ -58,8 +58,8 @@ interface RIACTFormData {
   riskContext: string;
 }
 
-export const RIACTForm: React.FC = () => {
-  const [formData, setFormData] = useState<RIACTFormData>({
+export const EcoHabifyForm: React.FC = () => {
+  const [formData, setFormData] = useState<EcoHabifyFormData>({
     scope: '',
     otherScope: '',
     riskType: '',
@@ -123,11 +123,11 @@ export const RIACTForm: React.FC = () => {
         const [parentKey, childKey] = nameParts;
         setFormData(prev => {
           // Check if the parent key exists and is an object
-          if (typeof prev[parentKey as keyof RIACTFormData] === 'object' && prev[parentKey as keyof RIACTFormData] !== null) {
+          if (typeof prev[parentKey as keyof EcoHabifyFormData] === 'object' && prev[parentKey as keyof EcoHabifyFormData] !== null) {
             return {
               ...prev,
               [parentKey]: {
-                ...(prev[parentKey as keyof RIACTFormData] as object),
+                ...(prev[parentKey as keyof EcoHabifyFormData] as object),
                 [childKey]: value
               }
             };
@@ -150,8 +150,8 @@ export const RIACTForm: React.FC = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // TODO: Implement form submission logic
-    console.log('RIACT Form Submitted:', formData);
-    alert('Thank you for submitting the RIACT form. We will review your submission.');
+    console.log('EcoHabify Form Submitted:', formData);
+    alert('Thank you for submitting the EcoHabify form. We will review your submission.');
   };
 
   return (
@@ -164,7 +164,7 @@ export const RIACTForm: React.FC = () => {
       <div className="flex items-center mb-8">
         <FaClipboardList className="text-4xl text-green-600 mr-4" />
         <ThemedH2 className="text-3xl font-bold text-green-600">
-          Risk Identification, Assessment, and Treatment (RIACT) Form
+          Risk Identification, Assessment, and Treatment (EcoHabify) Form
         </ThemedH2>
       </div>
 
@@ -530,7 +530,7 @@ export const RIACTForm: React.FC = () => {
             type="submit"
             className="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition duration-300 text-lg font-semibold"
           >
-            Submit RIACT Form
+            Submit EcoHabify Form
           </ThemedButton>
         </div>
       </form>

@@ -52,7 +52,7 @@ export const MyPhoto = () => {
               with a strong focus on urban resilience enhancement using a GIS-based approach.
             </p>
             <p className="mb-4">
-              His publications cover topics such as the Risk-Informed Asset-Centric (RIACT) Urban 
+              His publications cover topics such as the Risk-Informed Asset-Centric (EcoHabify) Urban 
               Resilience Enhancement Process, climate adaptation measures for enhancing urban resilience, 
               and resilience assessment of public buildings, multi-layer mapping of resilience exposure 
               in Portuguese cities, and the development of resilience rating systems.

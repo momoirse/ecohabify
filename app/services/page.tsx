@@ -16,7 +16,7 @@ import {
   ThemedH3, 
   ThemedP 
 } from '../components/ThemedComponents';
-import { RIACTForm } from '../components/RIACTForm';
+import { EcoHabifyForm } from '../components/EcoHabifyForm';
 
 export default function Services() {
   const services = [
@@ -68,7 +68,7 @@ export default function Services() {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <ThemedH1 className="text-center mb-12">
-            RIACT Urban Resilience Services
+            EcoHabify Urban Resilience Services
           </ThemedH1>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -87,7 +87,7 @@ export default function Services() {
           </div>
 
           <div className="mt-16">
-            <RIACTForm />
+            <EcoHabifyForm />
           </div>
         </div>
       </div>
