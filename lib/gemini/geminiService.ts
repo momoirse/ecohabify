@@ -1,5 +1,5 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { MY_THESIS } from "@/app/components/chatbot_assets/thesis";
+import { MY_STARTUP } from "@/app/components/chatbot_assets/MY_STARTUP";
 
 // Determine the API key from multiple possible sources
 const getApiKey = () => {
@@ -61,7 +61,7 @@ export class GeminiChatService {
           {
             role: "user",
             parts: [
-              {text: MY_THESIS},
+              {text: MY_STARTUP},
             ],
           },
         ],

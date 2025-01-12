@@ -6,8 +6,8 @@ import {
   FaEnvelope,
   FaPhone,
   FaMapMarkerAlt,
-  FaCity,
-  FaNetworkWired,
+  FaBuilding,
+  FaTools,
 } from "react-icons/fa";
 import {
   ThemedContainer,
@@ -25,8 +25,11 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    organization: "",
-    urbanChallenge: "",
+    propertyType: "",
+    propertyLocation: "",
+    renovationGoals: "",
+    energyEfficiencyNeeds: "",
+    timeline: "",
   });
 
   const handleChange = (
@@ -41,32 +44,31 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implement EcoHabify-specific form submission logic
-    console.log("EcoHabify Urban Resilience Inquiry:", formData);
+    console.log("EcoHabify Renovation Inquiry:", formData);
     alert(
-      "Thank you for your urban resilience inquiry! Our team will review and respond soon."
+      "Thank you for your sustainable renovation inquiry! Our team will contact you soon."
     );
-    setFormData({ name: "", email: "", organization: "", urbanChallenge: "" });
+    setFormData({ name: "", email: "", propertyType: "", propertyLocation: "", renovationGoals: "", energyEfficiencyNeeds: "", timeline: "" });
   };
 
   const contactInfo = [
     {
-      icon: FaCity,
-      title: "Urban Research Hub",
-      description: "EcoHabify Urban Resilience Research Center @tecnico ULisboa",
+      icon: FaBuilding,
+      title: "Portugal Office",
+      description: "Lisbon, Portugal",
       color: "text-green-600",
     },
     {
       icon: FaEnvelope,
-      title: "Email",
-      description: "seyedi.rezvani@tecnico.ulisboa.pt",
+      title: "Contact Email",
+      description: "Mahtabgholipour73@gmail.com, Acmanoori1373@gmail.com",
       color: "text-green-600",
     },
     {
-      icon: FaNetworkWired,
-      title: "Community Network",
-      description: "Global Urban Adaptation Platform",
-      color: "text-purple-600",
+      icon: FaPhone,
+      title: "Phone Numbers",
+      description: "+98 (939)197-0847, +98 (991)901-3842",
+      color: "text-green-600",
     },
   ];
 
@@ -80,14 +82,13 @@ export default function Contact() {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <ThemedH1 className="text-center mb-12">
-            Connect with EcoHabify Urban Resilience (DEMO INFORMATION - JUST TESTING
-            IN DEVELOPMENT MODE)
+            Transform Your Home into an Eco-Friendly Space
           </ThemedH1>
 
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Information */}
             <ThemedContainer className="p-8">
-              <ThemedH2 className="mb-8">Urban Resilience Network</ThemedH2>
+              <ThemedH2 className="mb-8">Connect with Our Experts</ThemedH2>
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-center mb-6">
                   <div className={`text-4xl mr-6 ${info.color}`}>
@@ -101,9 +102,9 @@ export default function Contact() {
               ))}
             </ThemedContainer>
 
-            {/* Contact Form */}
+            {/* Updated Contact Form */}
             <ThemedContainer className="p-8">
-              <ThemedH2 className="mb-8">Urban Challenge Inquiry</ThemedH2>
+              <ThemedH2 className="mb-8">Sustainable Renovation Inquiry</ThemedH2>
               <form onSubmit={handleSubmit}>
                 <div className="mb-4">
                   <ThemedLabel htmlFor="name">Name</ThemedLabel>
@@ -130,32 +131,68 @@ export default function Contact() {
                   />
                 </div>
                 <div className="mb-4">
-                  <ThemedLabel htmlFor="organization">Organization</ThemedLabel>
+                  <ThemedLabel htmlFor="propertyType">Property Type</ThemedLabel>
                   <ThemedInput
                     type="text"
-                    id="organization"
-                    name="organization"
-                    value={formData.organization}
+                    id="propertyType"
+                    name="propertyType"
+                    value={formData.propertyType}
                     onChange={handleChange}
-                    placeholder="Your Organization"
+                    placeholder="Apartment, House, Historic Building, etc."
                   />
                 </div>
+
+                <div className="mb-4">
+                  <ThemedLabel htmlFor="propertyLocation">Location in Portugal</ThemedLabel>
+                  <ThemedInput
+                    type="text"
+                    id="propertyLocation"
+                    name="propertyLocation"
+                    value={formData.propertyLocation}
+                    onChange={handleChange}
+                    placeholder="City/Region in Portugal"
+                  />
+                </div>
+
+                <div className="mb-4">
+                  <ThemedLabel htmlFor="energyEfficiencyNeeds">Energy Efficiency Goals</ThemedLabel>
+                  <ThemedTextarea
+                    id="energyEfficiencyNeeds"
+                    name="energyEfficiencyNeeds"
+                    value={formData.energyEfficiencyNeeds}
+                    onChange={handleChange}
+                    rows={3}
+                    placeholder="What energy efficiency improvements are you looking for?"
+                  />
+                </div>
+
                 <div className="mb-6">
-                  <ThemedLabel htmlFor="urbanChallenge">
-                    Urban Resilience Challenge
+                  <ThemedLabel htmlFor="renovationGoals">
+                    Renovation Goals
                   </ThemedLabel>
                   <ThemedTextarea
-                    id="urbanChallenge"
-                    name="urbanChallenge"
-                    value={formData.urbanChallenge}
+                    id="renovationGoals"
+                    name="renovationGoals"
+                    value={formData.renovationGoals}
                     onChange={handleChange}
                     required
                     rows={4}
-                    placeholder="Describe the urban resilience challenge you're addressing..."
+                    placeholder="Describe your sustainable renovation goals..."
+                  />
+                </div>
+                <div className="mb-4">
+                  <ThemedLabel htmlFor="timeline">Expected Timeline</ThemedLabel>
+                  <ThemedInput
+                    type="text"
+                    id="timeline"
+                    name="timeline"
+                    value={formData.timeline}
+                    onChange={handleChange}
+                    placeholder="When would you like to start?"
                   />
                 </div>
                 <ThemedButton type="submit" className="w-full">
-                  Submit Urban Resilience Inquiry
+                  Start Your Sustainable Renovation Journey
                 </ThemedButton>
               </form>
             </ThemedContainer>

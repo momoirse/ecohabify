@@ -16,17 +16,17 @@ export const Footer = () => {
   const socialLinks = [
     { 
       icon: FaTwitter, 
-      href: 'https://twitter.com/yourcompany', 
+      href: 'https://twitter.com/ecohabify', 
       label: 'Twitter' 
     },
     { 
       icon: FaLinkedin, 
-      href: 'https://linkedin.com/company/yourcompany', 
+      href: 'https://linkedin.com/company/ecohabify', 
       label: 'LinkedIn' 
     },
     { 
       icon: FaGithub, 
-      href: 'https://github.com/yourcompany', 
+      href: 'https://github.com/ecohabify', 
       label: 'GitHub' 
     }
   ];
@@ -47,12 +47,12 @@ export const Footer = () => {
             className="text-2xl font-bold mb-4 text-white"
             aria-label="Company Name"
           >
-            YourCompany
+            EcoHabify
           </h3>
           <p className="text-gray-400 mb-4">
-            Innovative technology solutions driving digital transformation.
+            EcoHabify is an innovative platform dedicated to simplifying sustainable home renovations in Portugal.
           </p>
-          <div className="flex space-x-3">
+          {/* <div className="flex space-x-3">
             {socialLinks.map((social, index) => (
               <ClientMotionA
                 key={social.label}
@@ -68,7 +68,7 @@ export const Footer = () => {
                 <social.icon size={24} />
               </ClientMotionA>
             ))}
-          </div>
+          </div> */}
         </ClientMotionDiv>
 
         {/* Quick Links */}
@@ -108,19 +108,19 @@ export const Footer = () => {
             <div className="flex items-center space-x-2">
               <FaEnvelope className="text-green-400" />
               <a 
-                href="mailto:contact@yourcompany.com" 
+                href="mailto:Mahtabgholipour73@gmail.com" 
                 className="text-gray-200 hover:text-white transition-colors"
               >
-                contact@yourcompany.com
+                Mahtabgholipour73@gmail.com
               </a>
             </div>
             <div className="flex items-center space-x-2">
               <FaPhone className="text-green-400" />
               <a 
-                href="tel:+1234567890" 
+                href="tel:+989391970847" 
                 className="text-gray-200 hover:text-white transition-colors"
               >
-                +1 (234) 567-890
+                +98 (939) 197-0847
               </a>
             </div>
           </div>
@@ -160,7 +160,7 @@ export const Footer = () => {
         className="text-center mt-12 pt-6 border-t border-gray-800"
       >
         <p className="text-gray-400">
-          &copy; {currentYear} YourCompany. All Rights Reserved.
+          &copy; {currentYear} EcoHabify. All Rights Reserved.
         </p>
       </ClientMotionDiv>
     </footer>

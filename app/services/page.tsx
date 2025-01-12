@@ -20,40 +20,28 @@ import {
 export default function Services() {
   const services = [
     {
-      icon: FaCity,
-      title: 'Urban Resilience Modeling',
-      description: 'Advanced computational models for urban system adaptation and risk mitigation.',
-      color: 'text-green-600'
-    },
-    {
       icon: FaNetworkWired,
-      title: 'Community Technology Integration',
-      description: 'Designing adaptive technological infrastructures for responsive urban environments.',
-      color: 'text-purple-600'
+      title: 'Smart Energy Assessments',
+      description: 'AI-powered analysis for clear insights into your home’s energy efficiency.',
+      color: 'text-blue-600'
     },
     {
       icon: FaBrain,
-      title: 'AI-Driven Urban Analytics',
-      description: 'Intelligent data analysis for predictive urban planning and resource optimization.',
+      title: 'Customized Retrofit Recommendations',
+      description: 'Tailored plans balancing efficiency, cost, and design to fit your needs.',
       color: 'text-green-600'
     },
     {
       icon: FaChartLine,
-      title: 'Resilience Performance Metrics',
-      description: 'Comprehensive frameworks for measuring and enhancing urban system adaptability.',
+      title: 'Educational Resources',
+      description: 'Webinars, guides, and courses to empower homeowners with knowledge.',
       color: 'text-red-600'
     },
     {
       icon: FaUsers,
-      title: 'Community Engagement Platforms',
-      description: 'Interactive digital tools for collaborative urban problem-solving and knowledge sharing.',
+      title: 'Verified Contractor Network',
+      description: 'Connecting you with trusted eco-friendly professionals for your projects.',
       color: 'text-indigo-600'
-    },
-    {
-      icon: FaShieldAlt,
-      title: 'Urban Risk Mitigation',
-      description: 'Strategic technological interventions for enhancing community preparedness and recovery.',
-      color: 'text-orange-600'
     }
   ];
 
@@ -67,7 +55,7 @@ export default function Services() {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <ThemedH1 className="text-center mb-12">
-            EcoHabify Urban Resilience Services
+            An Innovative Platform for an Eco-Conscious Future
           </ThemedH1>
 
           <div className="grid md:grid-cols-3 gap-8">

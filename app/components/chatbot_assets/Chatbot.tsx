@@ -149,7 +149,7 @@ export default function Chatbot() {
   >([]);
   const [customStyle, setCustomStyle] = useState("");
   const [isAdvancedOptionsOpen, setIsAdvancedOptionsOpen] = useState(false);
-  const [includeThesis, setIncludeThesis] = useState(true);
+  const [includeStartup, setIncludeStartup] = useState(true);
 
   const chatService = useRef(new GeminiChatService());
   const messagesEndRef = useRef<null | HTMLDivElement>(null);
@@ -241,9 +241,9 @@ export default function Chatbot() {
     );
   };
 
-  const toggleThesis = () => {
-    setIncludeThesis((prev) => !prev);
-    console.log("Toggle switched. Current state:", !includeThesis);
+  const toggleStartup = () => {
+    setIncludeStartup((prev) => !prev);
+    console.log("Toggle switched. Current state:", !includeStartup);
   };
 
   const resetChat = () => {
@@ -253,7 +253,7 @@ export default function Chatbot() {
     setSelectedStyle("none"); // Resets to default style
     setSelectedCustomizations([]); // Clears customizations
     setCustomStyle(""); // Clears custom style
-    setIncludeThesis(true); // Resets thesis inclusion
+    setIncludeStartup(true); // Resets Startup inclusion
   };
 
   return (
@@ -327,15 +327,14 @@ export default function Chatbot() {
             <div className="flex items-center">
               <FaFaceSmile className="mr-3 text-2xl" />
               <h2 className="text-lg font-semibold">
-                I am Seyed Mohammad Hossein Seyedi Rezvani
+                We are Mahtab Gholipour and Asma Noorihaghani
               </h2>
             </div>
 
             {/* Content Section */}
             <div className="mt-2">
               <p className="text-sm">
-                You can ask me any question about my thesis (The AI LLM model is
-                trained up to the end of case study 1).
+                You can ask me any question about our Startup ECOHABIFY
               </p>
             </div>
           </div>
@@ -366,7 +365,7 @@ export default function Chatbot() {
                           ? "bg-green-700 text-white"
                           : "bg-gray-700 text-gray-200"
                         : msg.sender === "user"
-                        ? "bg-green-500 text-white"
+                        ? "bg-green-500 text-gray-700"
                         : "bg-gray-200 text-gray-900"
                     }
                   `}
@@ -375,7 +374,7 @@ export default function Chatbot() {
                     ? parseFormattedText(msg.text, isDarkMode)
                     : msg.text}
 
-                  {msg.level && (
+                  {/* {msg.level && (
                     <div
                       className={`
                         text-xs mt-1 opacity-70 
@@ -390,7 +389,7 @@ export default function Chatbot() {
                     >
                       {msg.level} | {msg.style} Style
                     </div>
-                  )}
+                  )} */}
                 </div>
               </div>
             ))}

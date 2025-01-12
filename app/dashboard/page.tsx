@@ -32,12 +32,12 @@ export default function Dashboard() {
           className="bg-white shadow-xl rounded-lg p-8"
         >
           <h1 className="text-4xl font-bold mb-6 text-green-600">
-            Welcome, {user?.user_metadata?.name || 'User'}
+            Your Sustainable Home Journey
           </h1>
 
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h2 className="text-2xl font-semibold mb-4">Profile Information</h2>
+              <h2 className="text-2xl font-semibold mb-4">Your Profile</h2>
               <div className="space-y-2">
                 <p><strong>Email:</strong> {user.email}</p>
                 <p><strong>User ID:</strong> {user.id}</p>
@@ -45,19 +45,25 @@ export default function Dashboard() {
             </div>
 
             <div>
-              <h2 className="text-2xl font-semibold mb-4">Quick Actions</h2>
+              <h2 className="text-2xl font-semibold mb-4">Renovation Tools</h2>
               <div className="space-y-4">
                 <button 
                   className="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition"
-                  onClick={() => router.push('/profile')}
+                  onClick={() => router.push('/energy-assessment')}
                 >
-                  Edit Profile
+                  Smart Energy Assessment
                 </button>
                 <button 
                   className="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition"
-                  onClick={() => router.push('/projects')}
+                  onClick={() => router.push('/renovation-plan')}
                 >
-                  My Projects
+                  Renovation Plan
+                </button>
+                <button 
+                  className="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition"
+                  onClick={() => router.push('/contractors')}
+                >
+                  Find Eco-Friendly Contractors
                 </button>
               </div>
             </div>
