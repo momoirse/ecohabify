@@ -115,7 +115,7 @@ export const Hero = () => {
         pt-16 overflow-hidden
         ${
           isDarkMode
-            ? "bg-gradient-to-br from-[#486d37] via-[#486d37]/80 to-[#486d37]/60"
+            ? "bg-gradient-to-br from-[rgb(209,247,191)] via-[rgb(150,200,150)]/80 to-[rgb(100,200,150)]/60"
             : "bg-gradient-to-br from-[#486d37]/20 via-[#486d37]/10 to-[#486d37]/5"
         }
       `}
@@ -191,11 +191,11 @@ export const Hero = () => {
           <h1
             className={`
               text-5xl md:text-6xl font-extrabold mb-6 leading-tight
-              ${isDarkMode ? "text-green-300" : "text-green-800"}
+              ${isDarkMode ? "text-green-300" : "text-green-900"}
             `}
             aria-label="Main Headline"
           >
-            Empowering Sustainable Renovations with EcoHabify
+            Sustainable Renovations with EcoHabify
           </h1>
 
           <ClientMotionDiv
@@ -204,7 +204,7 @@ export const Hero = () => {
             transition={{ delay: 0.5, duration: 0.8 }}
             className={`
               text-xl mb-8 max-w-2xl mx-auto
-              ${isDarkMode ? "text-gray-300" : "text-gray-200"}
+              ${isDarkMode ? "text-gray-800" : "text-gray-300"}
             `}
           >
             EcoHabify is an innovative platform dedicated to simplifying
@@ -219,7 +219,10 @@ export const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 0.8 }}
-            className="mt-8 text-lg text-gray-200 max-w-3xl mx-auto"
+            className={`
+              text-xl mb-8 max-w-2xl mx-auto
+              ${isDarkMode ? "text-gray-800" : "text-gray-300"}
+            `}
           >
             By connecting homeowners with advanced technology and verified
             professionals, EcoHabify aims to revolutionize the way homes are
@@ -244,7 +247,7 @@ export const Hero = () => {
                   ${
                     isDarkMode
                       ? "bg-[#486d37] text-white hover:bg-[#486d37]/90 focus:ring-[#486d37]/50"
-                      : "bg-[#486d37]/90 text-white hover:bg-[#486d37] focus:ring-[#486d37]/50"
+                      : "bg-[#486d37]/90 text-black hover:bg-[#486d37] focus:ring-[#486d37]/50"
                   }
                 `}
                 aria-label="Explore Our Services"
@@ -266,7 +269,7 @@ export const Hero = () => {
                   ${
                     isDarkMode
                       ? "border-green-400 text-green-400 hover:bg-green-400 hover:text-white focus:ring-green-400"
-                      : "border-green-600 text-green-600 hover:bg-green-600 hover:text-white focus:ring-green-600"
+                      : "border-green-600 text-green-700 hover:bg-green-800 hover:text-black focus:ring-green-600"
                   }
                 `}
                 aria-label="Get Started with EcoHabify"
@@ -284,7 +287,7 @@ export const Hero = () => {
               transition={{ delay: 1.2, duration: 0.8 }}
               className="max-w-4xl mx-auto"
             >
-              <h2 className="text-3xl font-semibold mb-6 text-green-400">
+              <h2 className="text-3xl font-semibold mb-6 text-green-500">
                 The Challenge
               </h2>
               <div className="grid md:grid-cols-3 gap-6">
@@ -295,7 +298,7 @@ export const Hero = () => {
                   >
                     <problem.icon className="text-4xl mb-4 text-red-500" />
                     <h3 className="text-xl font-bold mb-2">{problem.title}</h3>
-                    <p className="text-gray-300">{problem.description}</p>
+                    <p className="text-gray-500">{problem.description}</p>
                   </ClientMotionDiv>
                 ))}
               </div>
@@ -321,7 +324,7 @@ export const Hero = () => {
                   >
                     <solution.icon className="text-4xl mb-4 text-blue-500" />
                     <h3 className="text-xl font-bold mb-2">{solution.title}</h3>
-                    <p className="text-gray-300">{solution.description}</p>
+                    <p className="text-gray-500">{solution.description}</p>
                   </ClientMotionDiv>
                 ))}
               </div>
@@ -336,8 +339,8 @@ export const Hero = () => {
               transition={{ delay: 1.6, duration: 0.8 }}
               className="max-w-6xl mx-auto"
             >
-              <h2 className="text-3xl font-semibold mb-6 text-green-400">
-                Our Services
+              <h2 className="text-2xl font-semibold mb-6 text-green-400">
+                Services
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {services.map((service, index) => (
@@ -347,7 +350,7 @@ export const Hero = () => {
                   >
                     <service.icon className="text-4xl mb-4 text-yellow-500" />
                     <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                    <p className="text-gray-300">{service.description}</p>
+                    <p className="text-gray-500">{service.description}</p>
                   </ClientMotionDiv>
                 ))}
               </div>
@@ -381,7 +384,7 @@ export const Hero = () => {
                   ${
                     isDarkMode
                       ? "bg-green-800/50 text-green-300 hover:bg-green-700/70"
-                      : "bg-green-100 text-green-600 hover:bg-green-200"
+                      : "bg-green-100 text-green-300 hover:bg-green-200"
                   }
                 `}
               >

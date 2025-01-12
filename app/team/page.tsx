@@ -21,7 +21,6 @@ export default function Team() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <ThemedH1 className="mb-8">About EcoHabify</ThemedH1>
-
           <ThemedContainer>
             <MyPhoto />
           </ThemedContainer>
