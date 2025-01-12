@@ -16,7 +16,6 @@ import {
   ThemedH3, 
   ThemedP 
 } from '../components/ThemedComponents';
-import { EcoHabifyForm } from '../components/EcoHabifyForm';
 
 export default function Services() {
   const services = [
@@ -84,10 +83,6 @@ export default function Services() {
                 <ThemedP>{service.description}</ThemedP>
               </ThemedContainer>
             ))}
-          </div>
-
-          <div className="mt-16">
-            <EcoHabifyForm />
           </div>
         </div>
       </div>
