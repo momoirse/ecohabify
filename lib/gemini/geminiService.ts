@@ -7,9 +7,9 @@ const getApiKey = () => {
   const apiKeyEnv = process.env.GEMINI_API_KEY;
   const apiKeyPublic = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
 
-  console.log('Checking API Keys:', {
-    serverEnv: apiKeyEnv ? 'SET' : 'UNSET',
-    publicEnv: apiKeyPublic ? 'SET' : 'UNSET'
+  console.log("Checking API Keys:", {
+    serverEnv: apiKeyEnv ? "SET" : "UNSET",
+    publicEnv: apiKeyPublic ? "SET" : "UNSET",
   });
 
   return apiKeyEnv || apiKeyPublic;
@@ -17,7 +17,7 @@ const getApiKey = () => {
 
 // Chat history type
 export interface ChatMessage {
-  role: 'user' | 'model';
+  role: "user" | "model";
   parts: string;
 }
 
@@ -33,7 +33,9 @@ export class GeminiChatService {
 
       // Validate API key
       if (!apiKey) {
-        console.error('CRITICAL: No Gemini API Key found in environment variables');
+        console.error(
+          "CRITICAL: No Gemini API Key found in environment variables"
+        );
         throw new Error(`
           Gemini API Key is missing. 
           Please set GEMINI_API_KEY or NEXT_PUBLIC_GEMINI_API_KEY 
@@ -42,9 +44,13 @@ export class GeminiChatService {
       }
 
       // Log the key source (for debugging, don't log the actual key)
-      console.log('Gemini API Key sourced from:', 
-        process.env.GEMINI_API_KEY ? 'server-side env' : 
-        process.env.NEXT_PUBLIC_GEMINI_API_KEY ? 'public env' : 'unknown'
+      console.log(
+        "Gemini API Key sourced from:",
+        process.env.GEMINI_API_KEY
+          ? "server-side env"
+          : process.env.NEXT_PUBLIC_GEMINI_API_KEY
+          ? "public env"
+          : "unknown"
       );
 
       // Initialize Gemini client
@@ -52,7 +58,8 @@ export class GeminiChatService {
 
       // Use Gemini 1.5 Flash model
       this.model = genAI.getGenerativeModel({
-        model: "gemini-1.5-flash",
+        // model: "gemini-1.5-flash",
+        model: "gemini-2.5-flash",
       });
 
       // Initialize chat session
@@ -60,21 +67,19 @@ export class GeminiChatService {
         history: [
           {
             role: "user",
-            parts: [
-              {text: MY_STARTUP},
-            ],
+            parts: [{ text: MY_STARTUP }],
           },
         ],
         generationConfig: {
           maxOutputTokens: 4096,
           temperature: 0.7,
           topP: 1,
-          topK: 40
-        }
+          topK: 40,
+        },
       });
     } catch (error) {
-      console.error('Gemini Service Initialization Error:', error);
-      
+      console.error("Gemini Service Initialization Error:", error);
+
       // Rethrow to prevent silent failures
       throw error;
     }
@@ -84,27 +89,27 @@ export class GeminiChatService {
   async sendMessage(message: string): Promise<string> {
     try {
       if (!this.chat) {
-        throw new Error('Gemini chat service not initialized');
+        throw new Error("Gemini chat service not initialized");
       }
 
       const result = await this.chat.sendMessage(message);
       const response = result.response.text();
-      
+
       // Log successful response for debugging
-      console.log('Gemini Response:', response);
-      
+      console.log("Gemini Response:", response);
+
       return response;
     } catch (error) {
       // Detailed error logging
       console.error("Detailed Gemini API Error:", {
-        message: error instanceof Error ? error.message : 'Unknown error',
-        stack: error instanceof Error ? error.stack : 'No stack trace',
-        input: message
+        message: error instanceof Error ? error.message : "Unknown error",
+        stack: error instanceof Error ? error.stack : "No stack trace",
+        input: message,
       });
 
       // More informative error message
       return `Sorry, I'm experiencing difficulties. Error details: ${
-        error instanceof Error ? error.message : 'Unknown error occurred'
+        error instanceof Error ? error.message : "Unknown error occurred"
       }. Please check your API key and try again.`;
     }
   }
@@ -118,11 +123,11 @@ export class GeminiChatService {
           maxOutputTokens: 4096,
           temperature: 0.7,
           topP: 1,
-          topK: 40
-        }
+          topK: 40,
+        },
       });
     } catch (error) {
-      console.error('Chat Reset Error:', error);
+      console.error("Chat Reset Error:", error);
     }
   }
 }

@@ -21,7 +21,8 @@ class GeminiAPIClient {
     try {
       this.genAI = new GoogleGenerativeAI(apiKey);
       this.model = this.genAI.getGenerativeModel({ 
-        model: "gemini-1.5-flash",
+        // model: "gemini-1.5-flash",
+        model: "gemini-2.0-flash-lite-preview-02-05",
         generationConfig: {
           maxOutputTokens: 500,
           temperature: 0.7,

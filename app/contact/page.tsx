@@ -48,14 +48,22 @@ export default function Contact() {
     alert(
       "Thank you for your sustainable renovation inquiry! Our team will contact you soon."
     );
-    setFormData({ name: "", email: "", propertyType: "", propertyLocation: "", renovationGoals: "", energyEfficiencyNeeds: "", timeline: "" });
+    setFormData({
+      name: "",
+      email: "",
+      propertyType: "",
+      propertyLocation: "",
+      renovationGoals: "",
+      energyEfficiencyNeeds: "",
+      timeline: "",
+    });
   };
 
   const contactInfo = [
     {
       icon: FaBuilding,
-      title: "Portugal Office",
-      description: "Lisbon, Portugal",
+      title: "(To be opend after approval)",
+      description: "(To be opend after approval)",
       color: "text-green-600",
     },
     {
@@ -104,7 +112,9 @@ export default function Contact() {
 
             {/* Updated Contact Form */}
             <ThemedContainer className="p-8">
-              <ThemedH2 className="mb-8">Sustainable Renovation Inquiry</ThemedH2>
+              <ThemedH2 className="mb-8">
+                Sustainable Renovation Inquiry
+              </ThemedH2>
               <form onSubmit={handleSubmit}>
                 <div className="mb-4">
                   <ThemedLabel htmlFor="name">Name</ThemedLabel>
@@ -131,7 +141,9 @@ export default function Contact() {
                   />
                 </div>
                 <div className="mb-4">
-                  <ThemedLabel htmlFor="propertyType">Property Type</ThemedLabel>
+                  <ThemedLabel htmlFor="propertyType">
+                    Property Type
+                  </ThemedLabel>
                   <ThemedInput
                     type="text"
                     id="propertyType"
@@ -143,7 +155,9 @@ export default function Contact() {
                 </div>
 
                 <div className="mb-4">
-                  <ThemedLabel htmlFor="propertyLocation">Location in Portugal</ThemedLabel>
+                  <ThemedLabel htmlFor="propertyLocation">
+                    Location in Portugal
+                  </ThemedLabel>
                   <ThemedInput
                     type="text"
                     id="propertyLocation"
@@ -155,7 +169,9 @@ export default function Contact() {
                 </div>
 
                 <div className="mb-4">
-                  <ThemedLabel htmlFor="energyEfficiencyNeeds">Energy Efficiency Goals</ThemedLabel>
+                  <ThemedLabel htmlFor="energyEfficiencyNeeds">
+                    Energy Efficiency Goals
+                  </ThemedLabel>
                   <ThemedTextarea
                     id="energyEfficiencyNeeds"
                     name="energyEfficiencyNeeds"
@@ -181,7 +197,9 @@ export default function Contact() {
                   />
                 </div>
                 <div className="mb-4">
-                  <ThemedLabel htmlFor="timeline">Expected Timeline</ThemedLabel>
+                  <ThemedLabel htmlFor="timeline">
+                    Expected Timeline
+                  </ThemedLabel>
                   <ThemedInput
                     type="text"
                     id="timeline"
