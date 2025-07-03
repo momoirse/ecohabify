@@ -59,7 +59,7 @@ export class GeminiChatService {
       // Use Gemini 1.5 Flash model
       this.model = genAI.getGenerativeModel({
         // model: "gemini-1.5-flash",
-        model: "gemini-2.5-flash",
+        model: "gemini-2.0-flash-lite",
       });
 
       // Initialize chat session
