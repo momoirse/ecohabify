@@ -209,10 +209,10 @@ export const Hero = () => {
             `}
           >
             EcoHabify is an innovative platform dedicated to simplifying
-            sustainable home renovations in Portugal. Our mission is to empower
-            homeowners to create energy-efficient, eco-friendly, and comfortable
-            living spaces through accessible tools, expert guidance, and
-            educational resources.
+            sustainable home renovations. Our mission is to empower homeowners
+            to create energy-efficient, eco-friendly, and comfortable living
+            spaces through accessible tools, expert guidance, and educational
+            resources.
           </ClientMotionDiv>
           {/* Feature Icons */}
           <div className="flex justify-center space-x-8 mt-12 mb-12">

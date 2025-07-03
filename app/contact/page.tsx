@@ -155,16 +155,14 @@ export default function Contact() {
                 </div>
 
                 <div className="mb-4">
-                  <ThemedLabel htmlFor="propertyLocation">
-                    Location in Portugal
-                  </ThemedLabel>
+                  <ThemedLabel htmlFor="propertyLocation">LOCATION</ThemedLabel>
                   <ThemedInput
                     type="text"
                     id="propertyLocation"
                     name="propertyLocation"
                     value={formData.propertyLocation}
                     onChange={handleChange}
-                    placeholder="City/Region in Portugal"
+                    placeholder="City/Region"
                   />
                 </div>
 
