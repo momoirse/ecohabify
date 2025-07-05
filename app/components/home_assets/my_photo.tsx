@@ -5,7 +5,7 @@ import { ClientMotionDiv } from "./ClientMotion";
 import { useTheme } from "@/src/context/ThemeContext";
 import PhotoAsma from "./PhotoAsma.jpg";
 import PhotoMahtab from "./PhotoMahtab.jpg";
-import PhotoBehrooz from "/PhotoBehrooz.jpg";
+import PhotoBehrooz from "./PhotoBehrooz.jpg";
 import { ThemedContainer } from "../ThemedComponents";
 
 export const MyPhoto = () => {
